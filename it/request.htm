@@ -1,0 +1,291 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+<head>
+<meta content="text/html;charset=utf-8" http-equiv="content-type"/>
+<title>Bed and breakfast Villa Crispi Mestre - Sito Ufficiale - Bed and Breakfast a Mestre Venezia</title>
+<meta content="Bed and breakfast Villa Crispi Mestre, a 10 minuti da Venezia, deliziosa residenza dei primi del '900 ideale sia per soggiorni turistici sia business." name="description"/>
+<meta content="Bed and breakfast Villa Crispi Mestre, bed and breakfast Mestre Venezia, bed and breakfast a Mestre Venezia, b&amp;b Venezia, Mestre bed and breakfast, Mestre Venezia bed and breakfast, Mestre Venezia b&amp;b, Villa Crispi Mestre" name="keywords"/>
+<meta content="global" name="distribution"/>
+<meta content="7 days" name="revisit-after">
+<meta content="all" name="robots"/>
+<link href="cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css" rel="stylesheet" type="text/css"/>
+<script src="cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
+<script>
+window.addEventListener("load", function(){
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#d9a08f"
+    },
+    "button": {
+      "background": "#ffffff"
+    }
+  },
+  "theme": "classic",
+  "type": "opt-in",
+  "content": {
+    "message": "Questo sito utilizza i cookie. Continuando a navigare in questo sito acconsenti all'utilizzo dei cookie.",
+    "dismiss": "a",
+    "allow": "Accetto",
+    "link": "Maggiori Informazioni",
+    "href": "http://www.villacrispi.it/it/cookie.htm"
+  }
+})});
+</script>
+<script language="JavaScript">
+function toForm() {
+document.NormalForm.cognome.focus();
+}
+</script>
+<script type="text/javascript">
+
+<!-- Begin
+
+function isObject(a) {
+    return (a && typeof a == 'object');
+}
+
+var haveerrors = 0;
+function showImage(imagename, imageurl, errors) {
+document[imagename].src = imageurl;
+if (!haveerrors && errors) haveerrors = errors;
+}
+
+function validateForm(f) {
+haveerrors = 0;
+
+
+// Controllo date arrivo - partenza
+var monthLength = new Array(31,28,31,30,31,30,31,31,30,31,30,31);
+var monthLength_back = new Array(31,28,31,30,31,30,31,31,30,31,30,31);
+
+var ArriveDateOk = true;
+var BackDateOk = true;
+var dateExists = true;
+var dateExists_back = true;
+
+var day = f.giorno_arrivo.value;
+var month = f.mese_arrivo.value;
+var year = f.anno_arrivo.value;
+
+var day_back = f.giorno_partenza.value;
+var month_back = f.mese_partenza.value;
+var year_back = f.anno_partenza.value;
+
+if (year/4 == parseInt(year/4))
+	monthLength[1] = 29;
+
+if (month <1)
+	dateExists = false;
+
+if (day <1)
+	dateExists = false;
+
+if (day > monthLength[month-1])
+	dateExists = false;
+
+monthLength[1] = 28;
+
+if (!dateExists) ArriveDateOk = false;
+
+if (year_back/4 == parseInt(year_back/4))
+	monthLength_back[1] = 29;
+
+if (month_back<1)
+	dateExists_back = false;
+
+if (day_back<1)
+	dateExists_back = false;
+
+if (day_back > monthLength_back[month_back-1])
+	dateExists_back = false;
+
+monthLength_back[1] = 28;
+
+if (!dateExists_back) BackDateOk = false;
+
+var now = new Date();
+//now = now.getTime(); //NN3
+now = Math.round(now.getTime()/1000); //NN3
+
+var dateToCheck = new Date();
+//dateToCheck.setYear(year);
+//dateToCheck.setMonth(month-1);
+//dateToCheck.setDate(day);
+//var checkDate = dateToCheck.getTime();
+dateToCheck.setFullYear(year,month-1,day);
+var checkDate = Math.round(dateToCheck.getTime()/1000);
+
+var dateToCheck_back = new Date();
+//dateToCheck_back.setYear(year_back);
+//dateToCheck_back.setMonth(month_back-1);
+//dateToCheck_back.setDate(day_back);
+//var checkDate_back = dateToCheck_back.getTime();
+dateToCheck_back.setFullYear(year_back,month_back-1,day_back);
+var checkDate_back = Math.round(dateToCheck_back.getTime()/1000);
+
+var ArriveDate = (now <= checkDate);
+var BackDate = (checkDate_back > checkDate);
+
+if (!ArriveDate) ArriveDateOk = false;
+if (!BackDate) BackDateOk = false;
+
+if(year=="" || month=="" || day == "") ArriveDateOk = false;
+if(year_back=="" || month_back=="" || day_back=="") BackDateOk = false;
+
+// var pastDate = (now > checkDate);
+// END - Controllo date arrivo - partenza
+
+function isChecked(strField){
+if (!strField.length) return strField.checked; // not a group
+for(var i = 0; i < strField.length; i++){
+if(strField[i].checked) return true; // yes one was ticked
+}
+return false;
+}
+
+Filtro = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-]{2,})+\.)+([a-zA-Z0-9]{2,})+$/;
+FiltroAnagrafica = /[a-zA-Z0-9\'\.]+/;
+
+(FiltroAnagrafica.test(f.nome.value)) == false
+? showImage("nome_error", "http://www.netplan.it/img_form/error.gif", true)   // no semi-colon after this line!
+: showImage("nome_error", "http://www.netplan.it/img_form/empty.gif", false); // true = errors, false = no errors
+
+(FiltroAnagrafica.test(f.nominativo.value)) == false
+? showImage("nominativo_error", "http://www.netplan.it/img_form/error.gif", true)   // no semi-colon after this line!
+: showImage("nominativo_error", "http://www.netplan.it/img_form/empty.gif", false); // true = errors, false = no errors
+
+(Filtro.test(f.email.value)) == false
+? showImage("email_error", "http://www.netplan.it/img_form/error.gif", true)   // no semi-colon after this line!
+: showImage("email_error", "http://www.netplan.it/img_form/empty.gif", false); // true = errors, false = no errors
+
+if(isObject(f.confermaemail) && (Filtro.test(f.email.value)==true) ){
+	(f.confermaemail.value != f.email.value)
+	? showImage("confermaemail_error", "http://www.netplan.it/img_form/error.gif",true)   // no semi-colon after this line!
+	: showImage("confermaemail_error", "http://www.netplan.it/img_form/empty.gif",false); // true = errors, false = no errors
+}
+
+if(isObject(f.appellativo) ){
+	(f.appellativo.options[f.appellativo.selectedIndex].value.length < 1 ) || (FiltroAnagrafica.test(f.cognome.value)) == false
+	? showImage("cognome_error", "http://www.netplan.it/img_form/error.gif",true)   // no semi-colon after this line!
+	: showImage("cognome_error", "http://www.netplan.it/img_form/empty.gif",false); // true = errors, false = no errors
+}else{
+	(FiltroAnagrafica.test(f.cognome.value)) == false
+	? showImage("cognome_error", "http://www.netplan.it/img_form/error.gif", true)   // no semi-colon after this line!
+	: showImage("cognome_error", "http://www.netplan.it/img_form/empty.gif", false); // true = errors, false = no errors
+}
+
+
+if( isObject(f.nazione) ){
+	(f.nazione.options[f.nazione.selectedIndex].value.length < 1 )
+	? showImage("nazione_error", "http://www.netplan.it/img_form/error.gif",true)   // no semi-colon after this line!
+	: showImage("nazione_error", "http://www.netplan.it/img_form/empty.gif",false); // true = errors, false = no errors
+}
+
+(!ArriveDateOk)
+? showImage("arrivo_error", "http://www.netplan.it/img_form/error.gif", true)
+: showImage("arrivo_error", "http://www.netplan.it/img_form/empty.gif", false);
+
+(!BackDateOk)
+? showImage("partenza_error", "http://www.netplan.it/img_form/error.gif", true)
+: showImage("partenza_error", "http://www.netplan.it/img_form/empty.gif", false);
+
+(f.quantita_alloggio_richiesta_1.value.length < 1)
+? showImage("quantita_alloggio_richiesta_1_error", "http://www.netplan.it/img_form/error.gif", true)   // no semi-colon after this line!
+: showImage("quantita_alloggio_richiesta_1_error", "http://www.netplan.it/img_form/empty.gif", false); // true = errors, false = no errors
+
+(f.tipo_alloggio_richiesta_1.value.length < 1)
+? showImage("tipo_alloggio_richiesta_1_error", "http://www.netplan.it/img_form/error.gif", true)   // no semi-colon after this line!
+: showImage("tipo_alloggio_richiesta_1_error", "http://www.netplan.it/img_form/empty.gif", false); // true = errors, false = no errors
+
+(f.totale_adulti.value.length < 1)
+? showImage("totale_adulti_error", "http://www.netplan.it/img_form/error.gif", true)   // no semi-colon after this line!
+: showImage("totale_adulti_error", "http://www.netplan.it/img_form/empty.gif", false); // true = errors, false = no errors
+
+(!isChecked(f.consenso))
+? showImage("consenso_error", "http://www.netplan.it/img_form/error.gif", true)   // no semi-colon after this line!
+: showImage("consenso_error", "http://www.netplan.it/img_form/empty.gif", false); // true = errors, false = no errors
+
+if(haveerrors){
+	str="Attenzione!\nNon tutti i campi obbligatori, messi in evidenza, sono stati compilati.";
+	alert(str);
+}
+return (!haveerrors);
+}
+//  End
+ -->
+</script>
+<script type="text/javascript">
+
+
+function toForm() {
+document.NormalForm.cognome.focus();
+}
+</script>
+<link href="../css/styles.css" rel="stylesheet" type="text/css"/>
+<script src="ajax/libs/jquery/1.5.0/jquery.min.js" type="text/javascript"></script>
+<link href="https://cdn.cssdelivr.net/npm/shadowbox-js@3.0.3/dist/shadowbox.min.css" rel="stylesheet" type="text/css"/>
+<script src="https://cdn.jsdelivr.net/npm/shadowbox-js@3.0.3/dist/shadowbox.min.js" type="text/javascript"></script>
+<script type="text/javascript"> Shadowbox.init(); </script>
+<script src="be.js" type="text/javascript"></script>
+</meta></head>
+<body onload="toForm();">
+<div id="frase">
+<div id="frase">
+<h1><strong>Bed and breakfast Villa Crispi Mestre</strong> - bed and breakfast Mestre Venezia - bed and breakfast a Mestre Venezia - b&amp;b Venezia -  hotels</h1>
+</div>
+</div>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td align="center" background="../img/bkg_esterno.jpg"><table border="0" cellpadding="0" cellspacing="0" width="750">
+<tr>
+<td><img alt="" border="0" height="75" src="../img/sopraint.jpg" width="750"/><br/>
+<div class="menutesto"> <a class="menu" href="index.htm">HOME</a> · <a class="menu" href="description.htm">DESCRIZIONE</a> · <a class="menu" href="location.htm">POSIZIONE</a> · <a class="menu" href="rooms.htm">CAMERE E PREZZI</a> · <a class="menu" href="specialoffers.htm">OFFERTE SPECIALI</a> · <a class="menu" href="reservations.htm">PRENOTAZIONI</a></div>
+<img alt="" border="0" height="247" src="../img/reserv1.jpg" width="375"/><img alt="" border="0" height="247" src="../img/reserv2.jpg" width="375"/></td>
+</tr>
+</table></td>
+</tr>
+<tr>
+<td align="center" background="../img/bkg_esterno_int.jpg"><table border="0" cellpadding="0" cellspacing="0" width="750">
+<tr>
+<td class="centroint"><br/>
+<br/>
+<br/>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td valign="top">
+</td>
+</tr>
+<tr>
+<td align="center"><img alt="" border="0" height="39" src="../img/fine.gif" width="750"/><br/>
+<p class="indirizzo"><b>Villa Crispi</b> - Via Francesco Crispi, 20 Venezia Mestre · Tel. +39.041.5349236 Fax +39.041 5348936 · <b><a href="mailto:info@villacrispi.it">info@villacrispi.it</a></b></p>
+<p class="americani"><b><a href="index.htm">Home</a></b> | <b><a href="location.htm">Posizione</a></b> | <b><a href="description.htm">Descrizione</a></b> | <b><a href="rooms.htm">Camere e prezzi</a></b> | <a href="specialoffers.htm"><b>Offerte Speciali</b></a> | <b><a href="reservations.htm">Prenotazioni</a></b><br/>
+										Choose your favourite language: <a href="../en/index.htm">English</a> | <a href="index.htm">Italian</a> | <a href="../de/index.htm">German</a><br/>
+</p>
+<p class="americani"> Villa Crispi © 2000-2016</p>
+<br/>
+<br/></td>
+</tr>
+</table></td>
+</tr>
+</table></td>
+</tr>
+</table>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-31521687-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</body>
+</html>
+<!-- Localized -->
